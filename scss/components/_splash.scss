@@ -1,0 +1,93 @@
+/* SPLASH HTML */
+
+#Lbanner {
+  background-color: rgba(0, 0, 0, .80);
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 1000000;
+  position: fixed;
+  overflow-y: auto;
+
+
+  .Lbanner-position {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+
+      @media (max-height: 600px) {
+          transform: none;
+          top: auto;
+      }
+  }
+
+  .Lbanner-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 64px 0;
+
+      .alertaSplash {
+          height: 100%;
+          width: 100%;
+          max-width: 475px;
+
+          #splash {
+              border-radius: 8px 0px 8px 8px;
+              margin: 0 16px;
+          }
+
+          .btn-fechar {
+              position: relative;
+
+              a {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  transform: translateY(-100%);
+                  text-decoration: none;
+                  padding: 8px;
+                  display: inline-block;
+                  border-radius: 4px 4px 0px 0px;
+              }
+          }
+    
+
+          .conteudo {
+              padding: 40px 50px 32px;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+
+      .div-block{
+        margin-bottom: 20px;
+      }
+
+              .logo-cliente {
+                  margin-bottom: 35px;
+              }
+
+              h2 {
+                  margin-bottom: 5px;
+              }
+
+      .botao-splash {
+        padding: 10px 50px;
+        margin-bottom: 20px;
+        margin-top:10px;
+      
+        .primary-button {
+          background-color: transparent;
+          border: 0;
+          font-weight: 500;
+        }
+      }
+          }
+      }
+  }
+}

@@ -1,0 +1,452 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="Master.Master.cs" Inherits="Meliuz.Master.Master" %>
+<%@ Register Assembly="ComuniqueSe.WebControls, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=5b058f9e1367e870" Namespace="ComuniqueSe.WebControls.ControlesMenu" TagPrefix="cmn" %>
+<%@ Register Assembly="ComuniqueSe.WebControls, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=5b058f9e1367e870" Namespace="ComuniqueSe.WebControls.MeusDownloads" TagPrefix="cmd" %>
+<%@ Register Assembly="ComuniqueSe.WebControls, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=5b058f9e1367e870" Namespace="ComuniqueSe.WebControls.ControleMateria" TagPrefix="wcd" %>
+
+
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" runat="server" lang="<%$Resources: htmlLinguagem %>"> <!--<![endif]-->
+	<head runat="server">
+        
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <title>Méliuz - Relações com Investidores</title>
+
+	
+	    <meta name="description" content="Entre em contato com a área de Relações com Investidores do Méliuz (CASH3), empresa de tecnologia que oferece soluções digitais por meio de uma plataforma integrada.">
+        <meta name="theme-color" content="#f34986"/> 
+		<asp:ContentPlaceHolder ID="ContentHeadMeta" runat="server"></asp:ContentPlaceHolder>
+
+		<asp:Literal runat="server" ID="canonical" ></asp:Literal>		
+
+        <link rel="shortcut icon" href="../images/favicon-32.png" type="image/x-icon" sizes="32x32"/>
+		<link rel="shortcut icon" href="../images/favicon-60.png" type="image/x-icon" sizes="60x60"/>
+		<link rel="shortcut icon" href="../images/favicon-76.png" type="image/x-icon" sizes="76x76"/>
+
+		<link rel="apple-touch-icon" href="../images/favicon-120.png" sizes="120x120"/>
+		<link rel="apple-touch-icon" href="../images/favicon-152.png" sizes="152x152"/>
+
+		<!-- Stylesheets CSS -->
+
+		<link rel="stylesheet" href="../vendors/bootstrap.min.css"/>
+
+		<link rel="stylesheet" href="../vendors/slick.css"/>
+		<link rel="stylesheet" href="../vendors/slick-theme.css"/>
+
+		<link rel="stylesheet" href="../vendors/jquery-ui.min.css"/>
+
+		<link rel="stylesheet" href="../css/import.dist.min.css"/>  
+
+		<meta name="apple-mobile-web-app-title" content="Méliuz | Relações com Investidores">
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link href="../images/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="../images/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="../images/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+        <link href="../images/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+        <link href="../images/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="../images/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+        <link href="../images/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="../images/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="../images/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="../images/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+
+	
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+		<![endif]-->
+        <script src="vendors/jquery.min.js"></script>   
+		
+		<link rel="manifest" href="../manifest.json">
+	    <script src="../sw.js"></script>
+
+	    <script>
+            if ("serviceWorker" in navigator) {
+                if (navigator.serviceWorker.controller) {
+                    console.log("Active service worker found, no need to register");
+                } else {
+                    // Register the service worker
+                    navigator.serviceWorker
+                        .register("sw.js", {
+                            scope: "./"
+                        })
+                        .then(function (reg) {
+                            console.log("Service worker has been registered for scope: " + reg.scope);
+                        });
+                }
+            }
+        </script>
+
+
+	</head>  
+    
+	<body>
+        <noscript>Your browser does not support JavaScript!</noscript>
+		<form id="Form1" action="#" runat="server">
+
+			<!--MODAL TELA INTEIRA-->
+			 <div class="alerta" style="display: none">
+				<div class="container">
+					<wcd:WebControlRetrancaSemHtml runat="server" ID="WebControlRetrancaSplashFull" QtdConteudos="4"
+						TamanhoTitulo="150" TamanhoTexto="180" TemplateBox="@htmlTexto"
+						TemplateImagem=""
+						TemplateTitulo=""
+						TemplateTexto="@textoMateria">
+					</wcd:WebControlRetrancaSemHtml>
+				</div>
+			</div>
+			
+			<div id="fadeModal" class="modal-backdrop fade in" style="display:none"></div> 
+			<a href="#mainContent" class="visually-hidden" accesskey="3">Pular para o Conteúdo</a>
+            
+            <div class="banner-home " id="idEscpaanimacao" runat="server" >
+				<!-- Accessibility Bar -->
+				<div id="accessibility-bar">
+					<div class="container container-responsivo-full">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="wrapper">
+									<a href="/show.aspx?IdCanal=4xew/ZetX30v0eb0OlHV/A==">
+										<small class="tag">
+											<asp:Literal runat="server" Text="<%$Resources:Acessibilidade  %>" ></asp:Literal> 
+										</small>
+									</a>									
+									<div class="accessibility-buttons">
+										<button type="button" class="button" id="toggleContrast">
+											<i class="icon-contraste" runat="server" title="<%$Resources: contraste %>"></i>
+										</button>
+
+										<button type="button" class="button" id="decreaseFont" runat="server" title="<%$Resources: diminuir %>">
+											<i class="icon-diminuir" accesskey="5"></i>
+										</button>
+
+										<button type="button" class="button" id="increaseFont" runat="server" title="<%$Resources: aumentar %>">
+											<i class="icon-aumentar-fonte" accesskey="4"></i>
+										</button>
+									</div>
+									<div class="btn-linguagem">
+										<asp:LinkButton  runat="server" ID="hlkCulturaEnUS" class="languages" OnCommand="HlkCulturaClick" accesskey="8" data-bs-toggle="tooltip" data-bs-placement="bottom" >
+											<img src="./images/icon-en-square.svg" alt="English">
+										</asp:LinkButton>
+										<asp:LinkButton  runat="server" ID="hlkCulturaPtBR" OnCommand="HlkCulturaClick" accesskey="7" data-bs-toggle="tooltip" data-bs-placement="bottom" >
+											<img src="./images/icon-portugues.svg" alt="Português">
+										</asp:LinkButton>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<header id="header">
+					<div class="container container-responsivo-full">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="wrapper">
+									<picture class="branding">
+										<a href="/" >
+											<source media="(max-width: 991.98px)" srcset="images/logotipo-meliuz-mobile.png" sizes="">
+										</a>
+										<a href="/default.aspx" accesskey="1">
+											<img src="images/logotipo-meliuz.png" alt="Méliuz - Relações com Investidores" class="img-fluid">
+											<p>
+												<asp:Literal runat="server" Text="<%$Resources: relacoesInvestidores %>" ></asp:Literal> 
+											</p>
+										</a>										
+									</picture>
+
+									<nav class="navigation">
+										<cmn:WebControlMenuTemplate ID="WebControlMenuTemplate"
+											MenuTemplate='<div class="dropdown"><button data-bs-auto-close="outside" class="dropdown-toggle" type="button" id="dropdownMenu-@attr" aria-expanded="false" data-bs-toggle="dropdown">@tituloCanal</button><ul class="dropdown-menu" aria-labelledby="dropdownMenu-@attr">@subMenu</ul></div>'
+											BoxSubMenuTemplate='@subMenuItens'
+											SubMenuTemplate='<li class="dropdown-page"><a class="dropdown-item" href="@url" target="@destino">@tituloCanal</a>@boxSubNeto</li>'
+											BoxSubMenuNetoTemplate='<ul class="dropdown-item menuNetos">@subMenuNeto</ul>'
+											SubMenuNetoTemplate="<li class='dropdown-page'><a href='@urlNeto' class='dropdown-item' target='@destino'>@tituloCanalNeto</a></li>"
+											runat='server'>
+										</cmn:WebControlMenuTemplate> 
+									</nav>
+
+									<button type="button" class="open-search-bar">
+										<i class="icon-busca" runat="server" title="<%$Resources: abrir %>" accesskey="2"></i>
+									</button>
+
+									<button type="button" class="open-menu">
+										<i class="icon-menu" title="Abrir Menu"></i>
+									</button>
+									<div class="language-mobile">
+										<a href="javascript:__doPostBack('ctl00$ctl00$hlkCulturaEnUS','')" id="linkEN" runat="server">
+											<img src="./images/icon-en-square.svg" alt="English">
+										</a>
+										<a href="javascript:__doPostBack('ctl00$ctl00$hlkCulturaPtBr','')" id="linkPT" runat="server">
+											<img src="./images/icon-portugues.svg" alt="Português">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<div class="breadcrumb">
+				</div>
+
+				
+
+				<div class="shortcuts removerHome">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="wrapper">
+									<div class="button-group">
+										<a id="linkFaleRI" runat="server" class="secondary-button">
+											<asp:Literal runat="server" Text="<%$Resources: faleRI %>" ></asp:Literal>  <i class="icon-arrow-right"></i>
+										</a>
+
+										<a id="linkCentral" runat="server" class="primary-button">
+											<asp:Literal runat="server" Text="<%$Resources: central %>" ></asp:Literal>  <i class="icon-arrow-right"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="home removerHome">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="d-flex justify-content-end">
+									<div>
+										<h1 class="home-title">
+										
+										<asp:Literal runat="server" Text="<%$Resources: titleBanner %>" ></asp:Literal></h1>
+										<div class="d-none d-lg-block">
+										<asp:Literal runat="server" Text="<%$Resources: linkButtonBanner %>" ></asp:Literal>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="stock-exchange removerHome">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="wrapper">
+									<div class="iframe-div">
+										<iframe runat="server" src="<%$Resources: linkCotacoes %>"></iframe>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="searchBox">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="wrapper">
+									<picture class="branding">
+										<a href="/">
+											<source media="(max-width: 991.98px)" srcset="images/logotipo-meliuz-mobile.png" sizes="">
+										</a>
+										<a href="/default.aspx">
+											<img src="images/logotipo-meliuz.png" alt="Méliuz - Relações com Investidores" class="img-fluid">
+										</a>										
+									</picture>
+
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">
+												<i class="icon-busca" title="Ícone de Busca"></i>
+											</span>
+										</div>
+
+										<input type="text" class="form-control inputBusca" runat="server" placeholder="<%$Resources: digite %>">
+
+										<div class="input-group-append">
+											<button type="button" class="input-group-text close-search-box" role="button">
+												<i class="icon-fechar" runat="server" title="<%$Resources: fechar %>"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<asp:ContentPlaceHolder ID="ContentInternal" runat="server"></asp:ContentPlaceHolder>
+            
+			<footer class="footer">
+				<div class="container container-responsivo-full">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="wrapper">
+								<div class="infos">
+									<img src="images/logotipo-meliuz-pink.png" alt="Méliuz" class="img-fluid">
+
+									<div class="networks">
+										<a href="https://www.facebook.com/Meliuz/" class="item" target="_blank">
+											<img src="images/icon-social-facebook.png" alt="Facebook" class="img-fluid">
+										</a>
+
+										<a href="https://www.instagram.com/meliuzoficial/" class="item" target="_blank">
+											<img src="images/icon-social-instagram.png" alt="Instagram" class="img-fluid">
+										</a>
+
+										<a href="https://www.youtube.com/MeliuzOficial" class="item" target="_blank">
+											<img src="images/icon-social-youtube.png" alt="YouTube" class="img-fluid">
+										</a>
+
+										<a href="https://twitter.com/MeliuzOficial" class="item" target="_blank">
+											<img src="images/icon-social-twitter.png" alt="Twitter" class="img-fluid">
+										</a>
+									</div>
+
+									<div class="copyright">
+										<small class="tag">
+											<asp:Literal runat="server" Text="<%$Resources: Copyright %>" ></asp:Literal> 
+										</small>
+									</div>
+								</div>
+
+								<div class="sitemap-and-utilities">
+									<div class="item">
+										<small class="fw-bold"><asp:Literal runat="server" Text="<%$Resources: CashGroup %>" ></asp:Literal> </small>
+
+										<ul class="sitemap">
+											<li class="page">
+												<a href="https://www.meliuz.com.br/" target="_blank">Méliuz</a>
+											</li>
+
+											<!--<li class="page">
+												<a href="https://www.idinheiro.com.br/" target="_blank">iDinheiro</a>
+											</li>-->
+
+											<li class="page">
+												<asp:Literal runat="server" Text="<%$Resources: picodi %>" ></asp:Literal>												
+											</li>
+
+											<li class="page">
+												<a href="https://www.promobit.com.br/" target="_blank">Promobit</a>
+											</li>
+
+											<li class="page">
+												<a href="https://melhorplano.net/" target="_blank">Melhor Plano</a>
+											</li>
+
+											<!-- <li class="page">
+												<a href="https://www.soualter.com.br/" target="_blank">Alter</a>
+											</li> -->
+											<li class="page">
+												<a href="https://www.muambator.com.br/" target="_blank">Muambator</a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="item">
+										<ul class="utilities">
+											<li class="util">
+												<a href="https://www.meliuz.com.br/termos-e-condicoes" target="_blank">
+													<asp:Literal runat="server" Text="<%$Resources: Termos %>" ></asp:Literal> 
+												</a>
+											</li>
+
+											<li class="util">
+												<a href="https://www.meliuz.com.br/termos-e-condicoes" target="_blank">
+													<asp:Literal runat="server" Text="<%$Resources: politicas %>" ></asp:Literal>
+												</a>
+											</li>
+
+											<li class="util">
+												<a href="https://canal.ouvidordigital.com.br/cash3" target="_blank">
+													<asp:Literal runat="server" Text="<%$Resources: canal %>" ></asp:Literal>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<picture>
+									<a href="https://riprisma.com.br" target="_blank">
+								        <img src="https://template.riweb.com.br/prisma/poweredby/selo/prisma-black.svg" alt="PRISMA">
+							        </a>
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<div class="box-cookies"  style="display: none">
+			    <asp:Literal Text="<%$Resources: cookies %>" runat="server"></asp:Literal>            
+			    <a class="btn secondary-button border-button" onclick='setCookie();'>OK</a>
+		    </div>
+
+			<aside id="mobile-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="wrapper">
+								<ul class="mobile-menu-list">
+									<cmn:WebControlMenuTemplate ID="WebControlMenuPaiMobile"
+										MenuTemplate='<li class="mobile-menu-list--page"><a href="javascript:" role="button" class="mobile-menu-page-@attr">@tituloCanal <i class="icon-arrow-right"></i></a></li>'
+										BoxSubMenuTemplate='@subMenuItens'
+										SubMenuTemplate=''
+										runat='server'>
+									</cmn:WebControlMenuTemplate>
+								</ul>
+
+								<cmn:WebControlMenuTemplate ID="WebControlMenuMobile"
+									MenuTemplate='<ul class="mobile-menu-dialog-@attr"><li class="back-mobile-menu-list"><i class="icon-arrow-left"></i> @tituloCanal</li>@subMenu</ul>'
+									BoxSubMenuTemplate='@subMenuItens'
+									SubMenuTemplate='<li class="dialog-item"> <a href="@url" target="@destino">@tituloCanal <i class="icon-arrow-right"></i></a> @boxSubNeto</li>'
+									BoxSubMenuNetoTemplate='<ul class="dropdown-item menuNetos">@subMenuNeto</ul>'
+									SubMenuNetoTemplate="<li class='dialog-item'><a href='@urlNeto' class='dropdown-item' target='@destino'>@tituloCanalNeto</a></li>"
+									runat='server'>
+								</cmn:WebControlMenuTemplate> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+
+
+		    <input type="hidden" class="hidLinguagem" runat="server" value="<%$resources:Linguagem %>" /> 
+            <a href="javascript:void(0)"  onclick="irParaTopo()" style="display:none" accesskey="9"></a>
+        
+				
+	        <script src="vendors/bootstrap.bundle.min.js"></script>
+			<script src="vendors/slick.min.js"></script>
+			<%--<script src="vendors/jquery-ui.min.js"></script>--%>			
+             <script src="javascripts/master.js"></script>
+			<script src="javascripts/main.js"></script>
+            <script async src="https://static.addtoany.com/menu/page.js"></script> 
+            
+            <asp:ContentPlaceHolder ID="ContentHead" runat="server"></asp:ContentPlaceHolder>
+            <a href="javascript:void(0)"  onclick="irParaTopo()" style="display:none" accesskey="9"></a>
+		</form>
+
+		 <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YJQGNY1LV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-4YJQGNY1LV');
+        </script>
+	</body> 
+</html>

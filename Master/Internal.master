@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master/Master.Master" AutoEventWireup="true" CodeBehind="Internal.master.cs" Inherits="Meliuz.Master.Internal" %>
+<%@ Register Assembly="ComuniqueSe.WebControls, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=5b058f9e1367e870" Namespace="ComuniqueSe.WebControls.ControleMeusFavoritos" TagPrefix="wfv" %>
+<%@ Register Assembly="ComuniqueSe.WebControls, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=5b058f9e1367e870" Namespace="ComuniqueSe.WebControls.ControlesMenu" TagPrefix="cmn" %>
+
+
+<asp:Content ContentPlaceHolderID="ContentHead" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="ContentHead">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="ContentHeadMeta" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="ContentHeadMeta">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="ContentInternal" runat="server"> 
+
+	<div class="container" id="breadcrumbInterna">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="wrapper">
+					<h1 class="page-title">
+						<asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolderTituloCanalPai">     
+						</asp:ContentPlaceHolder>
+					</h1>
+
+					<ul class="sitemap">
+						<cmn:WebControlBreadcrumb Id="WebControlBreadcrumb" runat="server" ItemTemplate="<li> <a href='@Url'> @Titulo </a></li>" Separador=""/> 
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="internal" id="mainContent">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-3">
+					<ul class="website-shortcut" id="menuInterno">
+						<cmn:WebControlMenuSubCanais ID="webControlMenuSubCanais" runat="server"
+                        HasTituloCanalPai="true"
+                        TemplateCanalPai=""
+                        TemplateBoxPrincipal="@conteudo"
+                        ItemTemplate="<li><a href='@url'>@title</a>@boxSubNeto</li>"
+                        BoxSubMenuNetoTemplate="<ul class='menuNetoLateral'>@subMenuNeto</ul>"
+                        SubMenuNetoTemplate="<li><a  href='@urlNeto' >@tituloCanalNeto</a></li>" />
+					</ul>
+				</div>
+
+				<div class="col-xl-9 divWidth">
+					<div class="content">
+						<div class="title-with-filter recebeCombo">							
+							<h2>
+								<asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolderTituloCanal">     
+								</asp:ContentPlaceHolder>
+							</h2>
+						</div>
+
+						<asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolderConteudo">     
+						</asp:ContentPlaceHolder>
+
+						<div class="see-too">
+							<p>
+								<asp:Literal runat="server" Text="<%$Resources: veja %>" ></asp:Literal> 
+							</p>
+
+							<div class="button-group">
+								<a id="linkFale" runat="server" class="secondary-button border-button">
+									<asp:Literal runat="server" Text="<%$Resources: fale %>" ></asp:Literal>  <i class="icon-arrow-right"></i>
+								</a>
+
+								<a id="linkMailing" runat="server" class="secondary-button border-button">
+									<asp:Literal runat="server" Text="<%$Resources: mailing %>" ></asp:Literal> <i class="icon-arrow-right"></i>
+								</a>
+
+								<a id="linkCVM" runat="server" class="secondary-button border-button">
+									<asp:Literal runat="server" Text="<%$Resources: cvm %>" ></asp:Literal> <i class="icon-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</asp:Content>

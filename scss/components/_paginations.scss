@@ -1,0 +1,40 @@
+.pagination {
+	margin-top: 56px;
+
+	align-items: center;
+	justify-content: center;
+
+	.page-item {
+		&:not(:last-of-type) {
+			margin-right: 4px;
+		}
+
+		&.active {
+			.page-link {
+				z-index: 1;
+				color: var(--pure-white);
+				background-color: var(--meliuz-main-color);
+			}
+		}
+
+		&.disabled {
+			.page-link {
+				[class^='icon-'] {
+					color: var(--text-grey);
+				}
+			}
+		}
+
+		.page-link {
+			border-radius: 8px;
+			border: none;
+			padding: 4px 12px;
+
+			color: var(--text-color);
+
+			[class^='icon-'] {
+				color: var(--meliuz-main-color);
+			}
+		}
+	}
+}

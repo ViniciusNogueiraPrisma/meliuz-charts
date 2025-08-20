@@ -1,0 +1,76 @@
+.page-erro {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.71) 0%,
+      rgba(0, 0, 0, 0.71) 100%
+    ),
+    url(../../images/background-home.png) #d3d3d3 50% / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .text-404 {
+    margin-bottom: 24px;
+  }
+
+  .page-not-found {
+    color: var(--text-white);
+
+    @media (max-width: 475px) {
+      font-size: rem(22);
+    }
+  }
+
+  .nao-encontramos {
+    color: var(--text-white);
+    margin-top: 28px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: var(--text-white);
+    font-weight: 200;
+  }
+
+  .buttons-error {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 18px;
+
+    @media (max-width: 475px) {
+      flex-direction: column;
+    }
+
+    a {
+      font-size: rem(18);
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 8px 40px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+
+      &:nth-child(1) {
+        background: var(--pure-white);
+        color: var(--meliuz-main-color);
+      }
+
+      &:nth-child(2) {
+        border: 2px solid var(--text-white);
+        color: var(--text-white);
+
+        &:hover {
+          background: var(--pure-white);
+          color: var(--meliuz-main-color);
+        }
+      }
+    }
+  }
+}

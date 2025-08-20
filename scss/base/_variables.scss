@@ -1,0 +1,62 @@
+:root {
+  // Typography
+
+  --font-hero-new: "Hero New";
+  --font-hero-new--hairline: "Hero New Hairline";
+  --font-icomoon: "icomoon";
+
+  // Text Colors
+
+  --text-sub-card: rgba(252, 164, 0, 1);
+  --text-meliuz: #ff0050;
+  --text-pink: #ff6a00;
+  --text-color: #4d4d4d;
+  --text-color-dark: #2a2a2a;
+  --text-grey: #999999;
+  --text-dark-grey: #767676;
+  --text-lightest-pink: #ed9d98;
+  --text-white: #ffffff;
+  --text-dark-pink: #dc004f;
+  --text-light-pink: #f34986;
+  --text-dark: #333333;
+  --text-lightest-pink: #fecad6;
+  --text-green: #09d429;
+  --text-blue: #14aecc;
+
+  // charts colors
+  --meliuz-main-color: #ff6a00;
+
+  --meliuz-color: #ff0050;
+  --meliuz-pink: #ff6265;
+  --meliuz-yellow: #fca400;
+  --meliuz-green: #9ce662;
+
+  --meliuz-green-light: #cbe7c3;
+  --meliuz-dark-green: #388a7e;
+
+  --meliuz-purple-light: #d899ff;
+  --meliuz-purple: #c973ff;
+
+  --meliuz-violet: #7479ff;
+  --meliuz-red: #9a1e16;
+
+  --border-card-melliuz: #d8d8d8;
+  --background-card-melliuz: #fafafa;
+  --background-alt-melliuz: #fafafa;
+
+  --grey-scale-0: #ffffff;
+  --grey-scale-1: #f2f2f2;
+  --grey-scale-2: #e5e5e5;
+  --grey-scale-3: #cccccc;
+  --grey-scale-4: #999999;
+  --grey-scale-5: #4d4d4d;
+  --grey-scale-6: #333333;
+
+  --pure-white: #ffffff;
+  --pure-black: #2a2a2a;
+
+  --system-error: #d23a20;
+  --system-alert: #ecb307;
+  --system-disabled: #bfbfbf;
+  --system-tooltip: #312b45;
+}

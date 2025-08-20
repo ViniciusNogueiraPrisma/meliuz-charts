@@ -1,0 +1,68 @@
+.form {
+	.form-group {
+		label {
+			margin-bottom: 12px;
+
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 16px;
+
+			color: var(--text-color);
+		}
+	}
+
+	.form-check {
+		.form-check-label {
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+		label {
+			color: var(--text-color);
+		}
+	}
+
+	& > small {
+		color: var(--text-grey);
+	}
+
+	.primary-button {
+		border-color: var(--meliuz-main-color);
+		color: var(--text-white);
+		background-color: var(--meliuz-main-color);
+
+		margin-right: 24px;
+
+		@media (max-width: 767px){
+			width: 100%;
+			margin-bottom: 24px;
+			justify-content: center;
+		}
+		
+		&:hover{
+			background: var(--secondary-color-4);
+			border-color: var(--secondary-color-4);
+		}
+	}
+
+	.button-group {
+		
+
+		button {
+			&:first-of-type {
+				margin-right: 32px;
+
+				@media (max-width: 767.98px) {
+					margin-right: 0;
+					margin-bottom: 16px;
+				}
+			}
+
+			@media (max-width: 767.98px) {
+				width: 100%;
+				text-align: center;
+				justify-content: center;
+			}
+		}
+	}
+}

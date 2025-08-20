@@ -1,0 +1,159 @@
+#datepicker, #datepickerWithTwoMonths {
+	@media (max-width: 767.98px) {
+		margin-bottom: 32px;
+	}
+
+	.ui-datepicker {
+		border: none;
+		border-radius: 0;
+
+		width: 100%;
+
+		.ui-datepicker-header {
+			margin-bottom: 8px;
+
+			border: none;
+			border-radius: 8px;
+
+			padding: 16px;
+
+			@include flexbox(row, center, space-between);
+
+			background-color: rgba(20, 174, 204, 0.3);
+
+			.ui-datepicker-prev, .ui-datepicker-next {
+				top: 50%;
+				transform: translateY(-50%);
+
+				height: unset;
+				width: unset;
+
+				font-size: 24px;
+				color: var(--meliuz-main-color);
+				text-decoration: none;
+				font-family: var(--font-icomoon);
+
+				&:hover {
+					border: none;
+					background-color: transparent;
+				}
+			}
+
+			.ui-datepicker-prev {
+				left: 16px;
+
+				&::before {
+					content: '\e901';
+				}
+			}
+
+			.ui-datepicker-next {
+				right: 16px;
+
+				&::before {
+					content: '\e902';
+				}
+			}
+
+			.ui-datepicker-title {
+				margin: 0;
+				font-family: var(--font-hero-new);
+			}
+		}
+
+		.ui-datepicker-calendar {
+			thead {
+				tr {
+					th {
+						padding-left: 0;
+						padding-right: 0;
+
+						font-family: var(--font-hero-new);
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						padding: 4px;
+
+						/*
+						&.ui-datepicker-today {
+							a {
+								border-color: var(--meliuz-pink-light);
+								color: var(--text-white);
+								background-color: var(--meliuz-pink-light);
+							}
+						}*/
+
+						a {
+							border-radius: 100%;
+							padding: 0;
+
+							height: 32px;
+							width: 32px;
+
+							@include flexbox (row, center, center);
+
+							text-align: center;
+							color: var(--text-grey);
+							background-color: transparent;
+
+							&.pink{
+								border-color:var(--meliuz-pink-light);
+								color: var(--text-white);
+								background-color: var(--meliuz-pink-light);
+							}
+
+							&.blue{
+								border-color: var(--secondary-color-9);
+								color: var(--text-white);
+								background-color: var(--secondary-color-9);
+							}
+
+							&.blue{
+								border-color: var(--secondary-color-9);
+								color: var(--text-white);
+								background-color: var(--secondary-color-9);
+							}
+
+							&.green{
+								border-color: var(--secondary-color-7);
+								color: var(--text-white);
+								background-color: var(--secondary-color-7);
+							}
+
+							&.purple{
+								border-color:  var(--meliuz-main-color);
+								color: var(--text-white);
+								background-color:  var(--meliuz-main-color);
+							}
+							
+							&.black{
+								border-color: var(--pure-black);;
+								color: var(--text-white);
+								background-color: var(--pure-black);;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#datepickerWithTwoMonths {
+	.ui-datepicker {
+		width: 100% !important;
+		max-width: unset;
+
+		.ui-datepicker-group {
+			width: unset;
+
+			&.ui-datepicker-group-first {
+				margin-right: 16px;
+			}
+		}
+	}
+}

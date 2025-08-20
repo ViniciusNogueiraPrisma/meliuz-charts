@@ -1,0 +1,338 @@
+// Hero New
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Thin.otf") format("opentype");
+
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Thin_Italic.otf") format("opentype");
+
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_UltraLight.otf") format("opentype");
+
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_UltraLight_Italic.otf") format("opentype");
+
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Light.otf") format("opentype");
+
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Light_Italic.otf") format("opentype");
+
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Regular.otf") format("opentype");
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Regular_Italic.otf") format("opentype");
+
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Medium.otf") format("opentype");
+
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Medium_Italic.otf") format("opentype");
+
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_SemiBold.otf") format("opentype");
+
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_SemiBold_Italic.otf") format("opentype");
+
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Bold.otf") format("opentype");
+
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Bold_Italic.otf") format("opentype");
+
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_ExtraBold.otf") format("opentype");
+
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_ExtraBold_Italic.otf") format("opentype");
+
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Super.otf") format("opentype");
+
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New";
+  src: url("../fonts/Hero_New_Super_Italic.otf") format("opentype");
+
+  font-weight: 900;
+  font-style: italic;
+}
+
+// Hero New Hairline
+
+@font-face {
+  font-family: "Hero New Hairline";
+  src: url("../fonts/Hero_New_Hairline") format("opentype");
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hero New Hairline";
+  src: url("../fonts/Hero_New_Hairline") format("opentype");
+
+  font-weight: 400;
+  font-style: italic;
+}
+
+// Icomoon
+
+@font-face {
+  font-family: "icomoon";
+
+  src: url("../fonts/Icomoon.eot?4r0lli");
+  src: url("../fonts/Icomoon.eot?4r0lli#iefix") format("embedded-opentype"),
+    url("../fonts/Icomoon.ttf?4r0lli") format("truetype"),
+    url("../fonts/Icomoon.woff?4r0lli") format("woff"),
+    url("../fonts/Icomoon.svg?4r0lli#icomoon") format("svg");
+
+  font-display: block;
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: block;
+
+  // Use !important to prevent issues with browser extensions that change fonts.
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gmail .path1:before {
+  content: "\e91a";
+  color: rgb(242, 242, 242);
+}
+
+.icon-gmail .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(241, 67, 54);
+}
+
+.icon-outlook .path1:before {
+  content: "\e91c";
+  color: rgb(255, 255, 255);
+}
+
+.icon-outlook .path2:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(0, 111, 196);
+}
+
+.icon-outlook .path3:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(0, 109, 195);
+}
+
+.icon-outlook .path4:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(239, 239, 239);
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+
+.icon-arrow-left:before {
+  content: "\e901";
+}
+
+.icon-arrow-right:before {
+  content: "\e902";
+}
+
+.icon-aumentar-fonte:before {
+  content: url("../../images/icon-minus.svg");
+}
+
+.icon-busca {
+  &:before {
+    content: url("../../images/icon-search.svg");
+  }
+}
+
+.icon-calendario:before {
+  content: "\e905";
+}
+
+.icon-checkbox:before {
+  content: "\e906";
+}
+
+.icon-checkbox-selected:before {
+  content: "\e907";
+}
+
+.icon-contraste:before {
+  content: "\e908";
+}
+
+.icon-diminuir:before {
+  content: url("../../images/icon-plus.svg");
+}
+
+.icon-download:before {
+  content: "\e90a";
+}
+
+.icon-e-mail:before {
+  content: "\e90b";
+}
+
+.icon-externo:before {
+  content: "\e90c";
+}
+
+.icon-fechar:before {
+  content: "\e90d";
+  color: var(--text-dark);
+}
+
+.icon-info:before {
+  content: "\e90e";
+}
+
+.icon-mais:before {
+  content: "\e90f";
+}
+
+.icon-menu:before {
+  content: "\e910";
+}
+
+.icon-minus:before {
+  content: "\e911";
+}
+
+.icon-pdf:before {
+  content: "\e912";
+}
+
+.icon-plus:before {
+  content: "\e913";
+}
+
+.icon-select:before {
+  content: "\e914";
+}
+
+.icon-selected:before {
+  content: "\e915";
+}
+
+.icon-telefone:before {
+  content: "\e916";
+}
+
+.icon-value:before {
+  content: "\e917";
+}
+
+.icon-video:before {
+  content: "\e918";
+}
+
+.icon-volume:before {
+  content: "\e919";
+}

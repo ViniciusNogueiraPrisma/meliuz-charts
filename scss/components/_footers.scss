@@ -1,0 +1,145 @@
+.footer {
+	.wrapper {
+		padding-top: 24px;
+		padding-bottom: 24px;
+
+		@include flexbox (row, flex-end, space-between);
+
+		@media (max-width: 1199px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		@media (min-width: 767px) and (max-width: 1199px) {
+			@include flexbox (row, flex-end, space-between);
+
+			flex-wrap: wrap;
+		}
+
+		.infos {
+			@media (max-width: 1199px) {
+				margin-bottom: 48px;
+			}
+
+			@media (min-width: 767px) and (max-width: 1199px) {
+				width: 100%;
+			}
+
+			& > img {
+				margin-bottom: 16px;
+				display: block;
+			}
+
+			.networks {
+				margin-bottom: 16px;
+
+				@include flexbox (row, flex-start, flex-start);
+
+				a {
+					display: block;
+					text-decoration: none;
+					color: inherit;
+
+					&:not(:last-of-type) {
+						margin-right: 24px;
+					}
+				}
+			}
+
+			.copyright {
+				.tag {
+					font-weight: 400;
+				}
+			}
+		}
+
+		.sitemap-and-utilities {
+			@include flexbox (row, flex-end, flex-start);
+
+			@media (max-width: 1199px) {
+				margin-bottom: 48px;
+			}
+
+			@media (max-width: 767.98px) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.item {
+				&:last-of-type {
+					border-left: 1px solid var(--grey-scale-2);
+					padding-left: 30px;
+
+					@media (max-width: 767.98px) {
+						margin-top: 48px;
+						border-left: 0;
+						padding-left: 0;
+					}
+				}
+
+				& > small {
+					margin-bottom: 16px;
+					display: block;
+				}
+
+				ul {
+					margin-bottom: 0;
+					padding-left: 0;
+
+					list-style-type: none;
+				}
+
+				.sitemap {
+					display: grid;
+					grid-template-columns: 131px 1fr 1fr;
+					margin-right: 24px;
+
+					@media (max-width: 375px){
+						grid-template-columns: 1fr 1fr;
+					}
+
+					.page {
+						margin-bottom: 8px;
+						margin-right: 8px;
+
+						a {
+							color: vaR(--text-color);
+							text-decoration: none;
+
+							&:hover{
+								color: var(--meliuz-main-color);
+							}
+						}
+					}
+				}
+
+				.utilities {
+					.util {
+						&:not(:last-of-type) {
+							margin-bottom: 16px;
+						}
+
+						a {
+							color: vaR(--text-color);
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+
+		.sitemap-and-utilities, & > picture {
+			@media (min-width: 767px) and (max-width: 1199px) {
+				margin-bottom: 0;
+			}
+		}
+
+		& > picture {
+			img {
+				@media (min-width: 767px) and (max-width: 1199px) {
+					float: right;
+				}
+			}
+		}
+	}
+}

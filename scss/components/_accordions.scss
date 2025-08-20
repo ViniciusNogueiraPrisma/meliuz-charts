@@ -1,0 +1,158 @@
+.accordion {
+  .accordion-item {
+    border: none;
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+
+    .accordion-button {
+      border-radius: 8px !important;
+      box-shadow: none;
+
+      padding: 16px;
+
+      color: var(--text-dark);
+      background-color: var(--theme-bg-primary-light);
+
+      @include flexbox(row, center, space-between);
+
+      &:focus,
+      &:hover {
+        z-index: 1;
+      }
+
+      &::after {
+        margin-left: 16px;
+
+        font-size: 24px;
+        line-height: 1;
+        font-family: var(--font-icomoon);
+        color: var(--theme-primary-light);
+        background-image: none;
+        transform: none;
+      }
+
+      &[aria-expanded="false"] {
+        &::after {
+          content: "\e913";
+        }
+      }
+
+      &[aria-expanded="true"] {
+        &::after {
+          content: "\e911";
+        }
+      }
+    }
+
+    .accordion-body {
+      padding-left: 8px;
+      padding-right: 8px;
+
+      p {
+        color: var(--text-color-dark);
+      }
+
+      a {
+        word-wrap: break-word;
+        color: var(--text-color-dark);
+      }
+    }
+  }
+}
+
+.sobre-o-meliuz {
+  .accordion {
+    .accordion-item {
+      .accordion-button {
+        color: var(--text-dark);
+        background-color: var(--theme-bg-primary-light);
+
+        &::after {
+          color: var(--theme-primary-light);
+        }
+      }
+    }
+  }
+}
+
+.social-e-governanca {
+  .accordion {
+    .accordion-item {
+      .accordion-button {
+        color: var(--text-white);
+        background-color: var(--theme-primary-light);
+
+        &::after {
+          color: var(--text-white);
+        }
+      }
+    }
+  }
+}
+
+.resultados-e-comunicados {
+  .accordion {
+    .accordion-item {
+      .accordion-button {
+        color: var(--text-dark);
+        background-color: var(--theme-bg-primary-light);
+
+        &::after {
+          color: var(--theme-primary-light);
+        }
+      }
+    }
+  }
+}
+
+.apresentacoes-relatorios-e-eventos {
+  .accordion {
+    .accordion-item {
+      .accordion-button {
+        color: var(--text-dark);
+        background-color: var(--theme-bg-primary-light);
+
+        &::after {
+          color: var(--theme-primary-light);
+        }
+      }
+    }
+  }
+}
+
+.servicos-ao-investidor {
+  .accordion {
+    .accordion-item {
+      .accordion-button {
+        color: var(--text-white);
+        background-color: var(--theme-primary-light);
+
+        &::after {
+          color: var(--white);
+        }
+
+        &[aria-expanded="true"] {
+          background-color: var(--meliuz-main-color);
+        }
+      }
+    }
+  }
+}
+
+#accordionConselhoAdm {
+  tr {
+    img {
+      transition: 0.3s;
+    }
+
+    &:not(.collapsed) {
+      td {
+        img {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}

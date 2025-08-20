@@ -1,0 +1,55 @@
+.stock-exchange {
+	margin-bottom: -24px;
+
+	margin-top: auto;
+
+	@media (max-width: 767px){
+		order: 3;
+	}
+
+	@media (max-width: 375.98px) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.wrapper {
+		border-radius: 10px;
+		box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.20);
+		padding: 16px;
+
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		background-color: var(--pure-white);
+
+		@media (min-width: 992px) {
+			float: right;
+		}
+
+		.exchange, .price, .percentage {
+			font-size: rem(13);
+			font-weight: 700;
+			line-height: rem(16);
+		}
+
+		.exchange {
+			color: var(--meliuz-main-color);
+		}
+
+		.price {
+			margin-right: 36px;
+			margin-left: 36px;
+		}
+
+		.percentage {
+			@include flexbox (row, center, flex-start);
+
+			color: var(--meliuz-main-color);
+
+			[class^='icon-'] {
+				margin-left: 4px;
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+.primary-button {
+	@include button;
+
+	border-color: var(--meliuz-main-color);
+	color: vaR(--text-white);
+	background-color: var(--meliuz-main-color);
+
+	&:hover {
+		border-color: var(--dark-color-200);
+		background-color: var(--dark-color-200);
+		color: var(--text-white);
+	}
+
+	&:focus {
+		border-color: var(--dark-color-300);
+		color: var(--meliuz-main-color);
+		background-color: var(--dark-color-300);
+	}
+}
+
+.secondary-button {
+	@include button;
+
+	border-color: var(--secondary-color-7);
+	color: var(--secondary-color-7);
+	background-color: transparent;
+
+	&:hover {
+		border-color: var(--meliuz-main-color);
+		color: var(--text-white);
+		background-color: var(--meliuz-main-color);
+	}
+
+	&:focus {
+		border-color: var(--secondary-color-7);
+		color: var(--text-white);
+		background-color: var(--secondary-color-7);
+	}
+}
+
+.read-more, .see-more {
+	position: relative;
+
+	color: var(--meliuz-main-color) !important;
+	font-weight: 700;
+	text-decoration: none;
+
+	display: inline-flex;
+	align-items: center;
+	width: max-content;
+
+	&:hover {
+		color: var(--secondary-color-9);
+
+		&::before {
+			width: 100%;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		content: '';
+
+		height: 2px;
+		width: 0;
+
+		background-color: var(--secondary-color-9);
+		transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	[class^='icon-'] {
+		margin-left: 16px;
+		display: block;
+	}
+}

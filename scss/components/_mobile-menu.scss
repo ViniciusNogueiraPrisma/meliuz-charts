@@ -1,0 +1,151 @@
+#mobile-menu {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 135px;
+  padding: 40px 32px;
+  display: none;
+  z-index: 999999;
+  transition: transform 0.5s linear;
+  transform: translateY(-200%);
+
+  background-color: #1b1b1b;
+
+  @media (max-width: 1199px) {
+    display: block;
+  }
+
+  @media (max-width: 991px) {
+    top: 80px;
+  }
+
+  &.active {
+    transform: translate(0);
+  }
+
+  .dropdown-item {
+    &:hover,
+    &:focus,
+    &:active {
+      background: none;
+    }
+  }
+
+  .wrapper {
+    overflow: hidden;
+
+    @include flexbox(row, flex-start, space-between);
+
+    transition: all 0.3s ease;
+
+    .mobile-menu-list {
+      margin-bottom: 0;
+      padding-left: 0;
+
+      width: 100%;
+
+      list-style-type: none;
+      transition: all 0.5s ease;
+
+      .mobile-menu-list--page {
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        &:not(:last-of-type) {
+          margin-bottom: 16px;
+        }
+
+        [class^="mobile-menu-page-"] {
+          font-size: rem(16);
+          line-height: rem(24);
+
+          @include flexbox(row, center, space-between);
+
+          color: var(--text-white);
+          text-decoration: none;
+
+          [class^="icon-"] {
+            margin-left: 32px;
+            display: block;
+
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    [class^="mobile-menu-dialog-"] {
+      margin-bottom: 0;
+      padding-left: 0;
+
+      width: 100%;
+      display: none;
+
+      list-style-type: none;
+      transition: all 0.5s ease;
+
+      .back-mobile-menu-list {
+        margin-bottom: 16px;
+
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        cursor: pointer;
+
+        @include flexbox(row, center, flex-start);
+
+        font-size: rem(16);
+        line-height: rem(24);
+
+        color: var(--meliuz-main-color);
+
+        [class^="icon-"] {
+          margin-right: 8px;
+          display: block;
+
+          font-size: 20px;
+        }
+      }
+
+      .dialog-item {
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        &:not(:last-of-type) {
+          margin-bottom: 16px;
+        }
+
+        a {
+          font-size: rem(16);
+          line-height: rem(24);
+
+          @include flexbox(row, center, space-between);
+
+          color: var(--text-white);
+          text-decoration: none;
+          white-space: break-spaces;
+
+          [class^="icon-"] {
+            margin-left: 32px;
+            display: block;
+
+            font-size: 20px;
+          }
+        }
+
+        &.dropdown-duplo {
+          .dropdown-page {
+            i {
+              transform: rotate(-90deg);
+            }
+          }
+        }
+
+        .menuNetos {
+          margin-top: 12px;
+          list-style: none;
+        }
+      }
+    }
+  }
+}

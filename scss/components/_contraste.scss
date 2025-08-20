@@ -1,0 +1,101 @@
+[data-theme="dark"] {
+  body {
+    background-color: #0d0d0d;
+  }
+
+  --text-meliuz: #ffffff;
+  --meliuz-main-color: #ff6a00;
+  --text-color: #ffffff;
+  --text-color-dark: #ffffff;
+  --text-grey: #ffffff;
+  --text-dark-grey: #ffffff;
+  --text-white: #ffffff;
+  --text-dark: #ffffff;
+
+  --light-color-300: #0d0d0d;
+
+  --dark-color-100: #0d0d0d;
+  --dark-color-200: #0d0d0d;
+  --dark-color-300: #0d0d0d;
+
+  --secondary-color-1: #0d0d0d;
+  --secondary-color-2: #0d0d0d;
+  --secondary-color-3: #0d0d0d;
+  --secondary-color-4: #0d0d0d;
+  --secondary-color-5: #0d0d0d;
+  --secondary-color-6: #0d0d0d;
+  --secondary-color-7: #0d0d0d;
+  --secondary-color-8: #0d0d0d;
+  --secondary-color-9: #0d0d0d;
+
+  --grey-scale-0: #0d0d0d;
+  --grey-scale-1: #0d0d0d;
+  --grey-scale-2: #0d0d0d;
+  --grey-scale-3: #0d0d0d;
+  --grey-scale-4: #0d0d0d;
+  --grey-scale-5: #0d0d0d;
+  --grey-scale-6: #0d0d0d;
+
+  --pure-white: #ffffff;
+  --pure-black: #2a2a2a;
+
+  --border-card-melliuz: #565656;
+  --background-card-melliuz: #1a1a1a;
+  --background-alt-melliuz: #0d0d0d;
+
+  .footer .wrapper .infos .networks {
+    img {
+      filter: brightness(0) invert(100%) sepia(0%) saturate(0%)
+        hue-rotate(49deg) brightness(103%) contrast(103%);
+    }
+  }
+
+  strong {
+    color: #ffffff;
+  }
+
+  .secondary-button:hover {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  #header
+    .wrapper
+    .navigation
+    .dropdown
+    .dropdown-menu
+    .dropdown-page
+    .dropdown-item {
+    &:hover {
+      color: var(--meliuz-main-color);
+    }
+  }
+  .content-new-chart .charts-container .chart-wrapper {
+    border: 1px solid var(--Indicadores-border, #565656);
+    background: var(--Indicadores-surface, #1a1a1a);
+  }
+
+  .content-new-chart .charts-container .charts .chart-loading {
+    background: var(--Indicadores-surface, #1a1a1a);
+  }
+
+  .content-new-chart .charts-container .chart-wrapper .others-infos-chart {
+    border-bottom: 1px solid #fff;
+  }
+
+  #header .wrapper {
+    border-bottom: 1px solid #636363;
+  }
+
+  #header.is-page-scroll .icon-busca:before {
+    filter: unset;
+  }
+
+  #header.is-page-scroll .img-fluid {
+    filter: unset;
+  }
+
+  .list-diretrizes li {
+    color: #fff;
+  }
+}
